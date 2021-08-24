@@ -1,0 +1,96 @@
+This code doesn't work, but anyways........
+
+const char * getMonth(int month) {
+    
+    switch (month)
+    {
+    case 1:
+        char* theMonth = 'January';
+        return theMonth;
+        break;
+    case 2: 
+        char *theMonth = 'February';
+        return theMonth;
+        break;
+    case 3: 
+        char *theMonth = 'March';
+        return theMonth;
+        break;
+    case 4: 
+        char *theMonth = 'April';
+        return theMonth;
+        break;
+    case 5:
+        char *theMonth = 'May';
+        return theMonth;
+        break;
+    case 6: 
+        char *theMonth = 'June';
+        return theMonth;
+        break;
+    case 7:
+        char *theMonth = 'July';
+        return theMonth;
+        break;
+    case 8:
+        char *theMonth = 'August';
+        return theMonth;
+        break;
+    case 9:
+        char *theMonth = 'September';
+        return theMonth;
+        break;
+    case 10: 
+        char* theMonth = "October";
+        return theMonth;
+        break;
+    case 11: 
+        char *theMonth = 'November';
+        return theMonth;
+        break;
+    case 12:
+        char *theMonth = 'December';
+        return theMonth;
+        break;
+    default:
+        break;
+    }
+}
+
+
+const char * getDay(int dayWeek) {
+    // To return a String in C, we had to return a pointer to the first element of the array of characters.
+    switch (dayWeek) {
+        case 0: 
+            char *theDay = 'Sunday';
+            return theDay;
+            break;
+        case 1:
+            char *theDay = 'Monday';
+            return theDay;
+            break ;
+        case 2:
+            char *theDay = 'Tuesday';
+            return theDay;
+            break;
+        case 3: 
+            char *theDay = 'Wednesday';
+            return theDay;
+            break;
+        case 4:
+            char *theDay = 'Thursday';
+            return theDay;
+            break;
+        case 5: 
+            char *theDay = 'Friday';
+            return theDay;
+            break;
+        case 6:  
+            char *theDay = 'Saturday';
+            return theDay;
+            break;
+        default:
+            return 'null';
+            break;
+    }
+}

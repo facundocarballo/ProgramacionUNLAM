@@ -97,17 +97,16 @@ int getCenturyCode(int year)
 int getYearCode(int year)
 {
     // Example: We received year = 1998
-    // varDouble = year / 100.0     |-> (19.98)
+    
     // varInt = year / 100.0        |-> (19)
-    // varDouble -= year            |-> (0.98)
-    // varDouble = varDouble * 100  |-> (98.0)
-    // (int) varDouble              |-> 98 (int)
-    float varDouble = year / 100.0;
+    // varInt = varInt * 100.0      |-> (1900)
+    // return year - varInt         |-> (1998 - 1900 = 98)    
     int varInt = year / 100.0;
-    varDouble -= varInt;
-    varDouble = varDouble * 100.0;
-    return (int) varDouble;
+    varInt = varInt * 100;
+    return year - varInt;
 }
+
+
 
 int getMonthCode(Date date)
 {
@@ -148,3 +147,6 @@ int getMonthCode(Date date)
         return date.month;
     }
 }
+
+
+
