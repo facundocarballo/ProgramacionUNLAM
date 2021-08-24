@@ -1,4 +1,4 @@
-#include "../const.h"
+#include "../bool.h"
 #ifndef FECHAS_H
 #define FECHAS_H
 
