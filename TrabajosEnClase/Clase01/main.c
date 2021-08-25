@@ -9,9 +9,9 @@ int main()
     if (isValidDate(date) == true)
     {
         printf("The date is valid.\n");
-        Date newAddDate = addDate(date, 5);             
-        Date newReduceDate = reduceDate(newAddDate, 3);
-        int differenceBTWdates = differenceToDates(date, newAddDate);
+        Date newAddDate = addDate(date, 100);             
+        Date newReduceDate = reduceDate(newAddDate, 100);
+        int differenceBTWdates = differenceToDates(date, newAddDate); // Hay errores aca...
         int dayWeek = dayOfTheWeek(date);
         printf("Difference in days between two dates: %d\n", differenceBTWdates);
         printf("Day of the week: %d\n", dayWeek);

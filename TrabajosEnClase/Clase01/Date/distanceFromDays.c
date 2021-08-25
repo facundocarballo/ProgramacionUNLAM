@@ -5,13 +5,11 @@
 
 Date addDay(Date date)
 {
-    int day = date.day;
-    // We can't use date.day in the if statement because in the question we added by one day
-    // So inside of the function, the day are affected.
-    if (day++ > monthDays(date))
+    
+    if ((date.day + 1) > monthDays(date))
     {
         date.day = 1;
-        if (date.month++ > 12)
+        if ((date.month + 1) > 12)
         {
             date.month = 1;
             date.year++;
@@ -43,7 +41,7 @@ int findDifference(const Date date1, const Date date2)
 {
     if (date1.year > date2.year)
         return getDifference(date1, date2);
-    else if (date2.year < date1.year)
+    else if (date2.year > date1.year)
         return getDifference(date2, date1);
     else
     {

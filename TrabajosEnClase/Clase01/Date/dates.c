@@ -22,14 +22,20 @@ bool isValidDate(const Date date)
 
 Date addDate(Date date, const int days)
 {
-    if ((date.day + days) <= monthDays(date))
-    {
-        date.day += days;
-    }
-    else
-    {
-        date.day = monthDays(date) - (date.day + days);
-        date.month += 1;
+    int i = 0;
+    while(i < days) { 
+        if ((date.day + 1) <= monthDays(date)) {
+            date.day++;
+        }else {
+            date.day = 1;
+            if ((date.month + 1) <= 12) { 
+                date.month++;
+            }else {
+                date.month = 1;
+                date.year++;
+            }
+        }
+        i++;
     }
     printf("addDate: %0.2d-%0.2d-%d \n", date.day, date.month, date.year);
     return date;
@@ -37,14 +43,21 @@ Date addDate(Date date, const int days)
 
 Date reduceDate(Date date, const int days)
 {
-    if ((date.day - days) >= 1)
-    {
-        date.day -= days;
-    }
-    else
-    {
-        date.month -= 1;
-        date.day = monthDays(date) + (date.day - days);
+    int i = 0;
+    while(i < days) {
+        if ((date.day - 1 != 0)) {
+            date.day--;
+        }else {
+            if ((date.month - 1 != 0)) {
+                date.month--;
+                date.day = monthDays(date);
+            }else {
+                date.month = 12;
+                date.year--;
+                date.day = monthDays(date);
+            }
+        }
+        i++;
     }
     printf("reduceDate: %0.2d-%0.2d-%d \n", date.day, date.month, date.year);
     return date;
