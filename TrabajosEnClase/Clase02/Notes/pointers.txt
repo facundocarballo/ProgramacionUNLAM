@@ -1,0 +1,12 @@
+To pass the address from a variable we used the operator (&)
+
+When we received a pointer in a function, we use (const Date* nameOfThePointer)
+Each pointer have his own struct, therefore ALWAYS we have to pass the type of the struct.
+The asterisk (*) tells you that the variable that you have it's a pointer.
+
+If we received a pointer to access each component of the struct instead of use (date.day)
+we have to use (date->day).
+This happends because a pointer to a memory address can't be used like a variable, so 
+to get all the information we need an instance of this variable.
+
+

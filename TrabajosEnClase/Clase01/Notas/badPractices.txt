@@ -1,0 +1,24 @@
+int findDifference(const Date date1, const Date date2)
+{
+    if (date1.year > date2.year)
+        return getDifference(date1, date2);
+    else if (date2.year > date1.year)
+        return getDifference(date2, date1);
+    else
+    {
+        if (date1.month > date2.month)
+            return getDifference(date1, date2);
+        else if (date2.month > date1.month)
+            return getDifference(date2, date1);
+        else
+        {
+            if (date1.day > date2.day)
+                return getDifference(date1, date2);
+            else
+                return getDifference(date2, date1);
+        }
+    }
+}
+This function by having (nested ifs) it's considered a BAD PRACRICE.
+According to my teacher, it's very difficult from a reader to understand
+when it's executed each block of code.

@@ -5,6 +5,7 @@
 
 Date addDay(Date date)
 {
+    // Bad practice, because we use nested if. CHECK THE CODE OF Clase02
     
     if ((date.day + 1) > monthDays(date))
     {
@@ -39,6 +40,8 @@ int getDifference(const Date greaterDate, Date lessDate)
 
 int findDifference(const Date date1, const Date date2)
 {
+    // Bad practice, because we use nested if. CHECK THE CODE OF Clase02
+
     if (date1.year > date2.year)
         return getDifference(date1, date2);
     else if (date2.year > date1.year)

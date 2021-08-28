@@ -22,45 +22,42 @@ bool isValidDate(const Date date)
 
 Date addDate(Date date, const int days)
 {
-    // Bad practice, because we use nested if. CHECK THE CODE OF Clase02
+    // FIXED Bad practice, because we use nested if (if anidados)
 
     int i = 0;
     while(i < days) { 
-        if ((date.day + 1) <= monthDays(date)) {
-            date.day++;
-        }else {
-            date.day = 1;
-            if ((date.month + 1) <= 12) { 
-                date.month++;
-            }else {
-                date.month = 1;
-                date.year++;
-            }
-        }
+        date = addDay(date);
         i++;
     }
     printf("addDate: %0.2d-%0.2d-%d \n", date.day, date.month, date.year);
     return date;
 }
 
+Date reduceDay(Date date) {
+    if ((date.day - 1) != 0) {
+        date.day--;
+        return date;
+    }
+
+    if ((date.month - 1) == 0) {
+        date.month = 12;
+        date.year--;
+        date.day = monthDays(date);
+        return date;
+    }else {
+        date.month--;
+        date.day = monthDays(date);
+        return date;
+    }
+}
+
 Date reduceDate(Date date, const int days)
 {
-    // Bad practice, because we use nested if. CHECK THE CODE OF Clase02
-    
+    // FIXED Bad practice, because we use nested if (if anidados)
+
     int i = 0;
     while(i < days) {
-        if ((date.day - 1 != 0)) {
-            date.day--;
-        }else {
-            if ((date.month - 1 != 0)) {
-                date.month--;
-                date.day = monthDays(date);
-            }else {
-                date.month = 12;
-                date.year--;
-                date.day = monthDays(date);
-            }
-        }
+        date = reduceDay(date);
         i++;
     }
     printf("reduceDate: %0.2d-%0.2d-%d \n", date.day, date.month, date.year);

@@ -64,14 +64,12 @@ bool isChangeCentury(const int year)
 
 int getCenturyCode(int year)
 {
-    // Bad practice, because we use nested if. CHECK THE CODE OF Clase02
-
+    // FIXED Bad practice, because we use nested if.
+    
     int yearBase = 2000;
     int centuryCode = 6;
     bool sumar = false;
-    if (isChangeCentury(year))
-    {
-        if (yearBase > year)
+        if (yearBase > year && isChangeCentury(year))
         {
             // Century before to century base
             int i = 0;
@@ -79,9 +77,9 @@ int getCenturyCode(int year)
             {
                 year += 100;
             }
-            centuryCode = changeCenturyCode(i, false);
+            return changeCenturyCode(i, false);
         }
-        else
+        else if (isChangeCentury(year))
         {
             // Century after to century base
             int i = 0;
@@ -89,10 +87,9 @@ int getCenturyCode(int year)
             {
                 yearBase += 100;
             }
-            centuryCode = changeCenturyCode(i, true);
+            return changeCenturyCode(i, true);
         }
-    }
-
+    
     return centuryCode;
 }
 

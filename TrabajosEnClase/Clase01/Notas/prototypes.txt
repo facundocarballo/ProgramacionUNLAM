@@ -1,0 +1,4 @@
+Prototypes are used so that we can use a function or a struct in any order.
+This is because, when the code is compiling, first of all it's compile the files.h and then the files.c.
+With this, in any file.c that we can use a function declarated in a file.h no matter if this function is compiled or not.
+Because the prototype of the function is compiled.
