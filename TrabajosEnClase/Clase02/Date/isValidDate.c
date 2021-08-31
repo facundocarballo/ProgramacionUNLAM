@@ -4,9 +4,9 @@
 #include "../bool.h"
 
 
-bool isBisiesto(const Date date)
+bool isBisiesto(const Date* date)
 {
-    if ((date.year % 4 == 0) && (date.year % 100 != 0) || (date.year % 400 == 0))
+    if ((date->year % 4 == 0) && (date->year % 100 != 0) || (date->year % 400 == 0))
     {
         return true;
     }
@@ -16,12 +16,12 @@ bool isBisiesto(const Date date)
     }
 }
 
-int monthDays(const Date date)
+int monthDays(const Date* date)
 {
     static const int theMonthDays[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    if (date.month == 2 && isBisiesto(date))
+    if (date->month == 2 && isBisiesto(date))
     {
         return 29;
     }
-    return theMonthDays[date.month - 1];
+    return theMonthDays[date->month - 1];
 }

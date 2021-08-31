@@ -7,7 +7,7 @@ Date addDay(Date date)
 {
     // FIXED Bad practice, because we use nested if.
 
-    if ((date.day + 1) <= monthDays(date)) {
+    if ((date.day + 1) <= monthDays(&date)) {
         date.day++;
         return date;
     }
@@ -24,23 +24,24 @@ Date addDay(Date date)
     }
 }
 
-int getDifference(const Date greaterDate, Date lessDate)
+int getDifference(const Date* greaterDate, Date* lessDate)
 {
     int difference = 0;
-    while ((greaterDate.year != lessDate.year) || (greaterDate.month != lessDate.month) || (greaterDate.day != lessDate.day))
+    Date newDate = *lessDate;
+    while ((greaterDate->year != newDate.year) || (greaterDate->month != newDate.month) || (greaterDate->day != newDate.day))
     {
         difference++;
-        lessDate = addDay(lessDate);
+        newDate = addDay(newDate);
     }
     return difference;
 }
 
-int findDifference(Date date1, Date date2)
+int findDifference(const Date* date1, const Date* date2)
 {
     // FIXED Bad practice, because we use nested if.
 
-    double date1Double = date1.year * 1000 + date1.month * 1 + date1.day * 0.01;
-    double date2Double = date2.year * 1000 + date2.month * 1 + date2.day * 0.01;
+    double date1Double = date1->year * 1000 + date1->month * 1 + date1->day * 0.01;
+    double date2Double = date2->year * 1000 + date2->month * 1 + date2->day * 0.01;
 
     if (date1Double > date2Double) {
         return getDifference(date1, date2);

@@ -1,5 +1,5 @@
-#ifndef CONST_H
-#define CONST_H
+#ifndef BOOL_H
+#define BOOL_H
 
 typedef enum
 {

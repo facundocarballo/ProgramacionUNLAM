@@ -107,9 +107,9 @@ int getYearCode(int year)
 
 
 
-int getMonthCode(Date date)
+int getMonthCode(Date* date)
 {
-    switch (date.month)
+    switch (date->month)
     {
     case 1:
         if (isBisiesto(date))
@@ -142,8 +142,8 @@ int getMonthCode(Date date)
     case 12:
         return 5;
     default:
-        printf("Error, Switch case unknown: %d\n)", date.month);
-        return date.month;
+        printf("Error, Switch case unknown: %d\n)", date->month);
+        return date->month;
     }
 }
 
