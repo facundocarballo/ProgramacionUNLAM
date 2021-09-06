@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+// ALWAYS INCLUDE THE FILE.H, FOR MAKE SURE THAT THE FILE.C WILL COMPILE ONLY ONCE TIME.
+// In this case I have to include the file.c because in the file.h I don't include all
+// the prototypes for the functions that I implement inside the file.c
 #include "Arrays/arrays.c"
 
 int main() {
@@ -60,4 +63,6 @@ int main() {
     puts("Sort Array Falling");
     sortArray(&upwardArray, false);
     printArray(&upwardArray);
+
+    return 0;
 }
