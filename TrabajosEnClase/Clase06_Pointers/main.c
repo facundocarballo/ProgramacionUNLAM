@@ -30,6 +30,7 @@ int main() {
 
     char origString[] = {"Hola como estas"}, destString[20], *aux; 
     time_t timeStringCopy = time(NULL);
+    // We can pass just 'destString' & 'origString' because there are pointers to the first element of the array.
     aux = stringCopy(destString, origString);
     timeStringCopy = time(NULL) - timeStringCopy;
     printf("Time: %ld seconds\n", timeStringCopy);
