@@ -58,9 +58,6 @@ void getFilesNames(char* actualFile, char* updateFile) {
             strcat(updateFile, ".dat");
             condition = 0;
         }
-        
-
-        
     }
 }
 
@@ -94,11 +91,9 @@ char update(const char* actualFile, const char* updateFile) {
         // Like the fActualFile is ordered
         // shows that the updateProduct has to be written in the future, but not now.
             
-        
         if (comp > 0)
             writeProductOfUpdateFile(&newProduct, &updateProduct, fWriteFile, fUpdateFile);
         // The updateProduct has to be written NOW
-            
     }
 
     // If one of the files wasn't read it all, we will continue reading the file here.
@@ -109,7 +104,6 @@ char update(const char* actualFile, const char* updateFile) {
     while (!feof(fUpdateFile)) 
         writeProductOfUpdateFile(&newProduct, &updateProduct, fWriteFile, fUpdateFile);
     
-
     fclose(fActualFile);
     fclose(fUpdateFile);
     fclose(fWriteFile);
