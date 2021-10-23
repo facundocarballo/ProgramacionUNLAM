@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1634933692 source:c:\users\and6d\documents\facundo\programacionunlam\pila\main.c
+	"main.h"
+
+1634934798 c:\users\and6d\documents\facundo\programacionunlam\pila\main.h
+	"stdio.h"
+	"productos/productos.h"
+	"lineasDeTexto/lineasDeTexto.h"
+	"pila.h"
+
+1634829537 source:c:\users\and6d\documents\facundo\programacionunlam\pila\productos\productos.c
+	"productos.h"
+
+1634830791 c:\users\and6d\documents\facundo\programacionunlam\pila\productos\productos.h
+	"stdio.h"
+	"../defs.h"
+
+1634833929 c:\users\and6d\documents\facundo\programacionunlam\pila\defs.h
+
+1634831100 c:\users\and6d\documents\facundo\programacionunlam\pila\lineasdetexto\lineasdetexto.h
+	<string.h>
+	"../defs.h"
+
+1634831185 source:c:\users\and6d\documents\facundo\programacionunlam\pila\lineasdetexto\lineasdetexto.c
+	"lineasDeTexto.h"
+
+1634939838 c:\users\and6d\documents\facundo\programacionunlam\pila\pila.h
+	"defs.h"
+
+1634848211 source:c:\users\and6d\documents\facundo\programacionunlam\pila\pila.c
+	"pila.h"
+
+1634939380 source:c:\users\and6d\documents\facundo\programacionunlam\pila\piladinamica.c
+	"main.h"
+
+1634933541 source:c:\users\and6d\documents\facundo\programacionunlam\pila\pilaestatica.c
+	"main.h"
+
